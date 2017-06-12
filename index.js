@@ -46,6 +46,9 @@ module.exports.prototype.play = function() {
         case "aplay":
             this.process = spawn('aplay', [this.options.filename, '-D', this.options.device]);
             break;
+        case "play":
+            this.process = spawn('play', [this.options.filename, '-v', this.options.device]);
+            break;
         case "afplay":
             this.process = spawn('afplay', [this.options.filename, '-v', this.options.gain]);
             break;
